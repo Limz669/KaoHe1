@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KaoHe1</title>
+</head>
+
+<body>
+    <form action="">
+        <p>请输入需要排列的字符串：</p>
+        <input type="text" id="Input" required="required" placeholder="请输入字符串">
+        <button type="button" onclick="SortStr()">提交</button>
+        <input type="text" id="Output">
+    </form>
+    <script>
+        function SortStr() {
+            var str = document.getElementById("Input").value;
+            str = str.split("");
+            str.sort(function (a, b) {
+                if (a > b) return 1;
+                else if (a <= b) return 0;
+            })
+            document.getElementById("Output").value = str;
+        }
+    </script>
+</body>
+
+</html>
