@@ -15,16 +15,19 @@
         <textarea name="" id="text" cols="25" rows="10"></textarea>
         <button type="button" onclick="message()" class="button">发送</button>
         <ul id="ul">
+            <!-- 留言的内容在这里展示 -->
             <h4>留言区</h4>
         </ul>
     </div>
     <script>
         function message() {
-            var ul = document.getElementById("ul");
-            var message = document.getElementById("text");
+            var ul = document.getElementById("ul");//获取ul标签
+            var message = document.getElementById("text");//获取输入的内容
             if (message.value == "") {
+                // 输入为空则弹窗提示
                 alert("留言内容不能为空！");
             } else {
+                //否则将创建一个新的li标签，将输入的内容赋值给li，再将li接到ul上
                 var li = document.createElement("li");
                 li.innerHTML = message.value;
                 ul.appendChild(li);
