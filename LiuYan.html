@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liuyan</title>
+    <link rel="stylesheet" href="Liuyan.css" type="text/css">
+</head>
+
+<body>
+    <div class="body">
+        <h3>留言板：请在评论区中写下你的评论</h3>
+        <textarea name="" id="text" cols="25" rows="10"></textarea>
+        <button type="button" onclick="message()" class="button">发送</button>
+        <ul id="ul">
+            <h4>留言区</h4>
+        </ul>
+    </div>
+    <script>
+        function message() {
+            var ul = document.getElementById("ul");
+            var message = document.getElementById("text");
+            if (message.value == "") {
+                alert("留言内容不能为空！");
+            } else {
+                var li = document.createElement("li");
+                li.innerHTML = message.value;
+                ul.appendChild(li);
+            }
+            message.value = "";
+        }
+    </script>
+</body>
+
+</html>

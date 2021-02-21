@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.body{
+    width: 400px;
+    height: 500px;
+    margin: 20px auto;
+    background-color: aquamarine;
+}
+.body h3{
+    text-align: center;
+}
+#text{
+    margin-top: 50px;
+    margin-left: 20px;
+    background-color: lightgray;
+    font-size: 16px;
+}
+.body button{
+    position: absolute;
+    background-color:lightskyblue;
+    width: 50px;
+    height: 25px;
+    top: 210px;
+    right: 470px;
+}
+ul{
+    text-align: center;
+    margin: 50px auto;
+    width: 400px;
+    height: 350px;
+    background-color: lightyellow;
+}
+li{
+    list-style-type: none;
+    text-align: center;
+    margin: 1px auto;
+}
